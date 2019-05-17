@@ -1,0 +1,15 @@
+<h1>{{book.title}}</h1>
+
+<img style="width: 100px; float: left; margin-right: 10px" src="{{book.author.0.pictureUrl}}"
+    alt="{{book.author.0.name}} {{book.author.0.lastName}}">
+<p>Written by: {{book.author.0.name}} {{book.author.0.lastName}} ({{book.author.0.nationality}})</p>
+
+{{#each book.author}}
+<p>{{name}} </p>
+
+{{/each}}
+
+
+<p>Summary: {{book.description}}</p>
+<p>Rating: {{book.rating}}/10</p>
+<a href="/books/list">Return</a>

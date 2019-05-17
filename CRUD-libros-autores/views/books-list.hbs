@@ -1,0 +1,13 @@
+<h1>Lista de libros (esta es la vista)</h1>
+
+<ul>
+  {{#each books}}
+  <li>
+    <a href="/books/view/{{this._id}}">{{this.title}}</a>
+    -
+    <a href="/books/edit?book_id={{this._id}}">editar</a>
+  </li>
+  {{/each}}
+</ul>
+
+<a href="/books/add">Añadir nuevo libro</a>
